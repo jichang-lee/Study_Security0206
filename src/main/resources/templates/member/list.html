@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+    <link rel="stylesheet" th:href="@{/css/list.css}">
+</head>
+<body>
+<div th:replace="~{/fragments/common/header :: headerFragment}"></div>
+
+<div class="container">
+    <div class="memberList">
+        <div class="memberList-con">
+            <div class="table-con">
+                <div class="title">
+                    <h1>회원목록</h1>
+                    <div class="search">
+                        <form th:action="@{/member/user/search}" method="get">
+                            <input type="text" name="search" id="search">
+                            <input type="submit" value="검색">
+                        </form>
+                    </div>
+                </div>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>번호</th>
+                            <th>이메일</th>
+                            <th>권한</th>
+                            <th>가입시간</th>
+                            <th>보기</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <form th:action="@{member/user/memberList}">
+                        <tr th:each="list : ${memberList}">
+                            <td th:text="${list.id}"></td>
+                            <td th:text="${list.email}"></td>
+                            <td th:text="${list.role}"></td>
+                            <td th:text="${#temporals.format(list.createTime,'yyy-MM-dd HH:mm:ss')}"></td>
+                            <td><a th:href="@{|/member/user/detail/${list.id}|}" style="color: blue">상세정보</a></td>
+                        </tr>
+                    </form>
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div th:replace="~{/fragments/common/footer :: footerFragment}"></div>
+
+
+
+
+
+</body>
+</html>

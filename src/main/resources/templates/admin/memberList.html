@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+<tr>
+  <th>회원번호</th>
+  <th>이메일</th>
+  <th>비밀번호</th>
+  <th>회원 가입 날짜</th>
+  <th>회원 수정 날짜</th>
+  <th>회원 권한</th>
+</tr>
+
+  <tr th:each="List : ${list}">
+    <td th:text="${List.id}"></td>
+    <td th:text="${List.email}"></td>
+    <td th:text="${List.password}"></td>
+    <td th:text="${List.createTime}"></td>
+    <td th:text="${List.updateTime}"></td>
+    <td th:text="${List.role}"></td>
+  </tr>
+</table>
+
+</body>
+</html>

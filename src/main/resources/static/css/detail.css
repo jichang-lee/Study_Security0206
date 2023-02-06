@@ -1,0 +1,52 @@
+@import url(/common/reset.css);
+@import url(/common/header.css);
+@import url(/common/footer.css);
+
+.container{
+    width: 100%;
+}
+.container .memberDetail{
+    width: 100%;
+}
+.container .memberDetail .memberDetail-con{
+    width: 100%;
+    padding: 72px 0;
+    box-sizing: border-box;
+    height: calc(100vh - 193px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .memberDetail .memberDetail-con .memberDetail-form{
+    border: 1px solid;
+    max-height: 50vh;
+    flex: 0 1 600px;
+    display: flex;
+    justify-content: space-between;
+}
+.container .memberDetail .memberDetail-con .memberDetail-form .left-menu{
+    flex: 1;
+}
+.container .memberDetail .memberDetail-con .memberDetail-form .left-menu img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.container .memberDetail .memberDetail-con .memberDetail-form .right-menu{
+    flex: 1;
+    
+}
+
+.container .memberDetail .memberDetail-con .memberDetail-form .right-menu ul{
+    display: flex;
+    flex-direction: column;
+    
+    gap: 10px;
+}
+
+.container .memberDetail .memberDetail-con .memberDetail-form .right-menu ul li{
+    border: 1px solid;
+    box-sizing: border-box;
+}

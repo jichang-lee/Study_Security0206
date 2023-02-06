@@ -1,0 +1,17 @@
+.footer{
+    width:100%;  
+    background-color: #076eab;
+  }
+  
+.footer .footer-con{
+    width:100%;  
+    display: flex;
+    justify-content: center;
+  }
+.footer .footer-con .addr{
+    flex:0 1 1600px;  
+    display: flex;
+    justify-content:center;
+    color: #ffffff;  
+    padding: 50px 0;
+  }

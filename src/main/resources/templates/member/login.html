@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인</title>
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+<body>
+
+
+
+<h1>login</h1>
+
+<div class="login">
+    <div class="login-con">
+        <div class="login-form">
+            <form th:action="@{/member/loginOk}" method="post" th:object="${memberDto}">
+                <ul>
+                    <li class="s1">Sign In</li>
+                    
+                    <li class="s2">
+                        <input type="text" id="email" name="email" placeholder="email" >
+<!--                        <li class="error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">email error</li>-->
+                    </li>
+
+                    <li class="s2">
+                        <input type="password" id="password" name="password" placeholder="password" >
+<!--                        <li class="error" th:if="${#fields.hasErrors('password')}" th:errors="*{password}">password error</li>-->
+                    </li>
+
+
+                    <li class="s3">
+                        <input type="submit" value="로그인" class="s3sub">
+                        <a th:href="@{/member/join}" class="s3sub">회원가입</a>
+                    </li>
+                </ul>
+            </form>
+            <div class="oauth">
+                <a th:href="@{/oauth2/authorization/google}">google</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

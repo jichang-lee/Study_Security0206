@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<div class="header" th:fragment="headerFragment">
+    <div class="header-con">
+        <div class="nav">
+            
+            <div class="left-menu">
+                <h1 class="logo">
+                    <a th:href="@{/}">
+                        <!-- <img th:src="@{/img/fff.jpg}" alt=""> -->logo
+                    </a>
+                </h1>
+                <div class="gnb">
+                    <ul>
+                        <li><a th:href="@{/user/main}">Shop</a></li>
+                        <li><a th:href="@{/user/women}">Women</a></li>
+                        <li><a th:href="@{/user/men}">Men</a></li>
+                        <li><a th:href="@{/user/info}">Info</a></li>
+                        <li sec:authorize="hasAnyRole('ADMIN','MANAGER','MEMBER')">
+                            <a th:href="@{/member/user/memberList}" >MEMBER</a></li>
+                        <li sec:authorize="hasAnyRole('ADMIN','MANAGER')">
+                            <a th:href="@{/manager/main}" >MANAGER</a></li>
+                        <li sec:authorize="hasAnyRole('ADMIN')">
+                            <a th:href="@{/admin/main}">ADMIN</a></li>
+                        <li sec:authorize="isAnonymous()">
+                            <a th:href="@{/member/login}">Login</a></li>
+                        <li sec:authorize="isAuthenticated">
+                            <a th:href="@{/logout}">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="right-menu">
+                <a href="#"><img th:src="@{/img/tel.png}" alt="tel"></a>
+                <a th:href="@{/member/user/memberList}"><img th:src="@{/img/user.png}" alt="png"></a>
+                <a href="#"><img th:src="@{/img/heart.png}" alt="heart"></a>
+                <a href="#"><img th:src="@{/img/bag.png}" alt="bag"></a>
+                <a href="#"><img th:src="@{/img/zoom.png}" alt="zoom"></a>
+            </div>
+        </div>
+    </div>
+</div>
+</html>

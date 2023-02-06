@@ -1,0 +1,77 @@
+.header{
+    width: 100%;
+    background-color: #076fab00;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+.header .header-con{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.header .header-con .nav{
+    /* flex: 0 1 1600px; */
+    flex: 1;
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .header-con .nav .left-menu{
+    flex: 0 1 600px;
+    /* min-width: 600px; */
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: space-between;
+}
+.header .header-con .nav .left-menu h1.logo{
+    flex: 0 0 72px;
+    height: auto;
+    line-height: 72px;
+    display: flex;
+    align-items: center;
+}
+.header .header-con .nav .left-menu h1.logo img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.header .header-con .nav .left-menu .gnb{
+    flex: 7;
+    height: auto;
+    
+}
+
+.header .header-con .nav .left-menu .gnb ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+.header .header-con .nav .left-menu .gnb ul li{
+    /* flex: 1; */
+    text-align: center;
+    line-height: 72px;
+}
+.header .header-con .nav .left-menu .gnb ul li a{
+    font-size: 16px;
+    color: white;
+}
+.header .header-con .nav .left-menu .gnb ul li a:hover{
+    background-color: black;
+}
+
+.header .header-con .nav .right-menu{
+    flex: 0 1 200px;
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: space-evenly;
+    gap: 3px;
+    align-items: center;
+    height: 72px;
+}
+
+.header .header-con .nav .right-menu a{
+    flex: 0 0 20px;
+    
+}

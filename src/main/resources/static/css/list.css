@@ -1,0 +1,39 @@
+@import url(/common/reset.css);
+@import url(/common/header.css);
+@import url(/common/footer.css);
+
+.header{
+    position:static;
+    background-color: #555;
+}
+
+.container{
+    width: 100%;
+    
+}
+
+.container .memberList{
+    width: 100%;   
+}
+
+.container .memberList .memberList-con{
+    width: 100%;
+    padding: 72px 0;
+    height: calc(100vh - 193px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.container .memberList .memberList-con table{
+    flex: 0 1 1200px;
+}
+
+.container .memberList .memberList-con table tr.title{
+    background-color: #000;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    padding: 10px 0;
+    box-sizing: border-box;
+}

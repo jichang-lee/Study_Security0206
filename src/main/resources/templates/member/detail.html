@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+    <link rel="stylesheet" th:href="@{/css/detail.css}">
+</head>
+<body>
+<div th:replace="~{/fragments/common/header :: headerFragment}"></div>
+
+<div class="container">
+    <div class="memberDetail">
+        <div class="memberDetail-con">
+             <div class="memberDetail-form">
+                <div class="left-menu">
+                    <img th:src="@{https://via.placeholder.com/300}" alt="img">
+                </div>
+                 <div class="right-menu">
+                     <ul>
+                        <li>
+                            <span>회원번호 : </span>
+                            <span th:text="${list.id}"></span>
+                        </li>
+                        <li>
+                            <span>이메일 : </span>
+                            <span th:text="${list.email}"></span>
+                        </li>
+                        <li>
+                            <span>권한 : </span>
+                            <span th:text="${list.role}"></span>
+                        </li>
+                        <li>
+                            <span>가입날짜 : </span>
+                            <span th:text="${list.createTime}"></span>
+                        </li>
+                        <li class="btn1">
+                            <a th:href="@{|/member/user/update/${list.id}|}" style="color: blue">회원수정</a>
+                            <a href="#" style="color: blue">회원탈퇴</a>
+                        </li>
+                     </ul>
+                 </div>
+                
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div th:replace="~{/fragments/common/footer :: footerFragment}"></div>
+
+
+
+
+
+</body>
+</html>
